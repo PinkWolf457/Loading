@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Redirecting</title>
+    <script>
+      function hideLoader() {
+        const loader = document.getElementById("loader");
+        const content = document.getElementById("main");
+
+        loader.classList.add("exit");
+
+        loader.addEventListener("animationend", () => {
+          loader.style.display = "none";
+          content.style.display = "block";
+          document.body.style.overflow = "auto";
+        });
+      }
+
+      window.addEventListener("load", () => {
+        setTimeout(hideLoader, 2000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="body">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <div class="base">
+          <span></span>
+          <div class="face"></div>
+        </div>
+      </div>
+
+      <div class="longfazers">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h1>Redirecting</h1>
+    </div>
+    <div id="main" class="main">
+      <p1>Salut coaie</p1>
+    </div>
+  </body>
+</html>
