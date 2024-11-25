@@ -4,52 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Redirecting</title>
-    <script>
-      function hideLoader() {
-        const loader = document.getElementById("loader");
-        const content = document.getElementById("main");
-
-        loader.classList.add("exit");
-
-        loader.addEventListener("animationend", () => {
-          loader.style.display = "none";
-          content.style.display = "block";
-          document.body.style.overflow = "auto";
-        });
-      }
-
-      window.addEventListener("load", () => {
-        setTimeout(hideLoader, 2000);
-      });
-    </script>
+    <title>Chill Guy</title>
+    <style></style>
   </head>
   <body>
-    <div id="loader" class="loader">
-      <div class="body">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        const content = document.getElementById("content");
 
-        <div class="base">
-          <span></span>
-          <div class="face"></div>
-        </div>
-      </div>
-
-      <div class="longfazers">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <h1>Redirecting</h1>
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          content.style.display = "block";
+        }, 2500);
+      });
+    </script>
+    <div class="loader-container" id="loader">
+      <img src="chill1.png" alt="Loading..." class="loader-image" />
+      <h1>Rabdare sefule!</h1>
     </div>
-    <div id="main" class="main">
-      <p1>Salut coaie</p1>
+
+    <div class="main-content" id="content" style="display: none">
+      <div class="main">
+        <nav>
+          <img src="chill1.png" alt="chill" />
+          <h1>Salut sefule ai nimerit bine</h1>
+
+          <h2>
+            Uite cei 3 pasi pe care trebuie sa ii urmezi pentru a deveni un
+            baiat linistit
+          </h2>
+          <div class="buttons">
+            <button><strong>buton 1</strong></button>
+            <button><strong>buton 1</strong></button>
+            <button><strong>buton 1</strong></button>
+          </div>
+        </nav>
+      </div>
     </div>
   </body>
 </html>
